@@ -1,0 +1,93 @@
+/* Functionen */
+@mixin border-radius($radius)
+{
+	-webkit-border-radius: $radius;
+    -khtml-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin box-shadow($style)
+{
+	-webkit-box-shadow:$style;
+	-moz-box-shadow:$style;
+	box-shadow:$style;
+}
+
+@mixin animi($duration, $style: null)
+{
+	@if($style) {
+		-webkit-transition:$style $duration cubic-bezier(0.215, 0.665, 0.110,.9);
+		-moz-transition:$style $duration cubic-bezier(0.215, 0.665, 0.110,.9);
+		-o-transition:$style $duration cubic-bezier(0.215, 0.665, 0.110,.9);
+		transition:$style $duration cubic-bezier(0.215, 0.665, 0.110,.9);
+	} @else {
+		-webkit-transition:$duration cubic-bezier(0.215, 0.665, 0.110,.9);
+		-moz-transition:$duration cubic-bezier(0.215, 0.665, 0.110,.9);
+		-o-transition:$duration cubic-bezier(0.215, 0.665, 0.110,.9);
+		transition:$duration cubic-bezier(0.215, 0.665, 0.110,.9);
+	}
+}
+
+@mixin translateY($style)
+{
+	-webkit-transform:translateY($style);
+	-moz-transform:translateY($style);
+	-ms-transform:translateY($style);
+	-o-transform:translateY($style);
+	transform:translateY($style);
+}
+
+@mixin translateX($style)
+{
+	-webkit-transform:translateX($style);
+	-moz-transform:translateX($style);
+	-ms-transform:translateX($style);
+	-o-transform:translateX($style);
+	transform:translateX($style);
+}
+
+@mixin scale($style)
+{
+	-webkit-transform:scale($style);
+	-moz-transform:scale($style);
+	-ms-transform:scale($style);
+	-o-transform:scale($style);
+	transform:scale($style);
+}
+
+@mixin rotate($style)
+{
+	transform:rotate($style);
+	-o-transform:rotate($style);
+	-ms-transform:rotate($style);
+	-moz-transform:rotate($style);
+	-webkit-transform:rotate($style);
+}
+
+@mixin blur($style)
+{
+	-webkit-filter: blur($style);
+	-moz-filter: blur($style);
+	-o-filter: blur($style);
+	-ms-filter: blur($style);
+	filter: blur($style);
+}
+
+@mixin media($breakpoint)
+{
+	@if $breakpoint == small {
+		@media (max-width: 500px) { @content; }
+	}
+	@else if $breakpoint == medium {
+		@media (min-width: 501px) and (max-width: 999px)  { @content; }
+	}
+	@else if $breakpoint == large {
+		@media (min-width: 1000px)  { @content; }
+	}
+	@else if $breakpoint == retina {
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)  { @content; }
+	}
+}

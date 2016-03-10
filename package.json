@@ -1,0 +1,19 @@
+{
+    "name": "newScrollbar",
+    "version": "0.0.1",
+    "description": "replace the native scrollbar",
+    "author": "Philipp Heidrich",
+    "author_mail": "phi.heidrich@gmail.com",
+
+    "devDependencies": {
+        "grunt": "*",
+        "grunt-banner": "*",
+        "grunt-contrib-concat": "*",
+        "grunt-contrib-copy": "*",
+        "grunt-contrib-sass": "*",
+        "grunt-contrib-uglify": "*",
+        "grunt-contrib-watch": "*",
+        "load-grunt-tasks": "*",
+        "grunt-include-replace": "*"
+    }
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;iEACiE;AAIjE;iEACiE",
+"sources": ["../../src/scss/newScrollbar.scss"],
+"names": [],
+"file": "newScrollbar.css"
+}
