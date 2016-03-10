@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>newScrollbar</title>
+
         <meta charset="utf-8" />
 
-        <title>newScrollbar</title>
+        <link rel="stylesheet" type="text/css" href="app.css" />
 
         <!-- Copy this -->
         <link rel="stylesheet" type="text/css" href="newScrollbar/newScrollbar.css" />
         <script type="text/javascript" src="newScrollbar/newScrollbar.js"></script>
-        <!-- /Copy this -->
 
-        <link rel="stylesheet" type="text/css" href="app.css" />
+        <script type="text/javascript">
+            newScrollbar.init('.scrollMe');
+        </script>
+        <!-- /Copy this -->
     </head>
     <body>
+        <div id="wrapper" class="index">
+            <!-- {% include('layout/_b-header.html') %} -->
 
+            <div class="showBox">
+                <div class="sb-inner">
+                    {% include('widget/_b-default.html') %}
+                </div>
+            </div>
+        </div>
     </body>
 </html>

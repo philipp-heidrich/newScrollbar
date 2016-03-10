@@ -13,6 +13,7 @@
         "grunt-contrib-sass": "*",
         "grunt-contrib-uglify": "*",
         "grunt-contrib-watch": "*",
+        "grunt-text-replace": "*",
         "load-grunt-tasks": "*",
         "grunt-include-replace": "*"
     }

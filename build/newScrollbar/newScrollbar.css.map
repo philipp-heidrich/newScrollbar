@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA;iEACiE;AAIjE;iEACiE",
+"mappings": "AAAA,aAAc;EACV,QAAQ,EAAC,QAAQ;EAAE,GAAG,EAAC,CAAC;EAAE,IAAI,EAAC,CAAC;EAAE,OAAO,EAAC,CAAC;EAM3C,sBAAW;IACP,aAAa,EAAC,IAAI;EAGtB,sBAAW;IACP,cAAc,EAAC,IAAI",
 "sources": ["../../src/scss/newScrollbar.scss"],
 "names": [],
 "file": "newScrollbar.css"

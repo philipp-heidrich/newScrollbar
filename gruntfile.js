@@ -113,6 +113,22 @@ module.exports = function(grunt)
             }
 		},
 
+        replace: {
+            debug: {
+                src: [
+                    path.build + '/**/*.html',
+                    path.build + '/**/*.js'
+                ],
+                overwrite: true,
+				replacements: [
+                    {
+    					from: 	'{{ VERSION }}',
+    					to: 	'<%= pkg.version %>'
+    				}
+                ]
+            }
+        },
+
 		includereplace: {
 			options: {
 				prefix: '{% ',
@@ -149,8 +165,7 @@ module.exports = function(grunt)
 			css: {
 				files: path.scss + '/**/*.scss',
 				tasks: [
-					'sass:debug',
-                    'sass:app'
+					'sass:debug'
 				]
 			},
 			js: {
@@ -193,6 +208,7 @@ module.exports = function(grunt)
 		'sass:debug',
 		'concat:debug',
         'copy:debug',
+        'replace:debug',
         'usebanner',
         'watch'
 	]);
