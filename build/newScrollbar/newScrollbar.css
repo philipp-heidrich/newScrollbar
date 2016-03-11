@@ -1,11 +1,63 @@
+/* @import global
+---------------------------------------------------------------*/
+/* Functionen */
+/* @import newScrollbar
+---------------------------------------------------------------*/
 .newScrollbar {
   position: relative;
-  top: 0;
-  left: 0;
-  padding: 0; }
+  padding: 0;
+  margin: 0; }
+  .newScrollbar .nsb-content {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
   .newScrollbar.scroll-y {
-    padding-right: 20px; }
+    padding-right: 10px; }
   .newScrollbar.scroll-x {
-    padding-bottom: 20px; }
+    padding-bottom: 10px; }
+  .newScrollbar .nsb-scrollArea {
+    position: absolute;
+    opacity: .5;
+    -webkit-transition: opacity 0.5s cubic-bezier(0.215, 0.665, 0.11, 0.9);
+    -moz-transition: opacity 0.5s cubic-bezier(0.215, 0.665, 0.11, 0.9);
+    -o-transition: opacity 0.5s cubic-bezier(0.215, 0.665, 0.11, 0.9);
+    transition: opacity 0.5s cubic-bezier(0.215, 0.665, 0.11, 0.9); }
+    .newScrollbar .nsb-scrollArea.nsb-scroll-y {
+      width: 10px;
+      height: 100%;
+      top: 0;
+      right: 0;
+      padding-bottom: 10px; }
+      .newScrollbar .nsb-scrollArea.nsb-scroll-y .nsb-sc-in-thumb {
+        width: 100%;
+        min-height: 50px; }
+    .newScrollbar .nsb-scrollArea.nsb-scroll-x {
+      width: 100%;
+      height: 10px;
+      bottom: 0;
+      left: 0;
+      padding-right: 10px; }
+      .newScrollbar .nsb-scrollArea.nsb-scroll-x .nsb-sc-in-thumb {
+        min-width: 50px;
+        height: 100%; }
+    .newScrollbar .nsb-scrollArea.nsb-inactive {
+      opacity: .1; }
+      .newScrollbar .nsb-scrollArea.nsb-inactive .nsb-sc-inner .nsb-sc-in-thumb {
+        display: none; }
+    .newScrollbar .nsb-scrollArea .nsb-sc-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: red; }
+      .newScrollbar .nsb-scrollArea .nsb-sc-inner .nsb-sc-in-thumb {
+        background-color: blue;
+        position: absolute;
+        left: 0;
+        top: 0;
+        cursor: pointer; }
+  .newScrollbar:hover .nsb-scrollArea {
+    opacity: 1; }
+    .newScrollbar:hover .nsb-scrollArea.nsb-inactive {
+      opacity: .1; }
 
 /*# sourceMappingURL=newScrollbar.css.map */

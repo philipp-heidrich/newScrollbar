@@ -1,15 +1,7 @@
-.newScrollbar {
-    position:relative; top:0; left:0; padding:0;
+/* @import global
+---------------------------------------------------------------*/
+@import 	"variable";
 
-    .nsb-content {
-
-    }
-
-    &.scroll-y {
-        padding-right:20px;
-    }
-
-    &.scroll-x {
-        padding-bottom:20px;
-    }
-}
+/* @import newScrollbar
+---------------------------------------------------------------*/
+@import     "newScrollbar/widget";
